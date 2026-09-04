@@ -15,6 +15,6 @@ Dátumok:
 - Algoritmus:
     11. 06.
 - bemutatás:
-    1. 31.
+    01. 31.
 - KÉSZ:
-    4. 07.
+    04. 07.

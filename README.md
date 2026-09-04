@@ -14,3 +14,7 @@ Dátumok:
     10. 30.
 - Algoritmus:
     11. 06.
+- bemutatás:
+    01. 31.
+- KÉSZ:
+    04. 07.

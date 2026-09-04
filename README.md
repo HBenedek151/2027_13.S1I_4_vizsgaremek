@@ -8,13 +8,8 @@ csapattagok:
 
 
 Dátumok:
-- Specifikáció:
-    9. 25.
-- Adatszerkezet:
-    10. 30.
-- Algoritmus:
-    11. 06.
-- Bemutatás:
-    01. 31.
-- KÉSZ:
-    04. 07.
+- Specifikáció:  09. 25.
+- Adatszerkezet: 10. 30.
+- Algoritmus:    11. 06.
+- Bemutatás:     01. 31.
+- KÉSZ:          04. 07.

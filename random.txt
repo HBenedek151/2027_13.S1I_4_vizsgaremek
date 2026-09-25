@@ -1,0 +1,31 @@
+regisztrációs felület:
+-felhasználó
+-adatok megadása
+-email ellenőrzés
+-ingyenes regisztráció
+
+navbar:
+-home gomb (logó)
+-profil (ha nincs bejelentkezve, akkor bejelentkezés gomb)
+-kereső
+-hirdetés létrehozása
+-kategóriák
+–szűrők
+-inbox (értesítések)
+
+profil(lenyíló fül):
+-kedvencek (ha lejár, akkor tűnik)
+-fiók
+-kijelentkezés
+
+fiók:
+-preview a fiókról (mutogatja a hirdetéseket, ha vannak sajátok)
+-kedvencek
+-beállítások (adatok szerkesztése, preferenciák)
+
+hirdetés létrehozó:
+-neve
+-leírás
+-képek feltöltése
+-időtartomány megadása
+-helyszín

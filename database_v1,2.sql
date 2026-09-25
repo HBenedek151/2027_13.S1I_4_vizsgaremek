@@ -4,8 +4,7 @@ CREATE TABLE `user`(
     `password` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
     `phone` BIGINT NOT NULL,
-    `birth_date` DATETIME NOT NULL,
-    `new_column` BIGINT NOT NULL
+    `birth_date` DATETIME NOT NULL
 );
 CREATE TABLE `publisher`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -16,8 +15,11 @@ CREATE TABLE `events`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(255) NOT NULL,
     `description` MEDIUMTEXT NOT NULL,
+    `location` VARCHAR(255) NOT NULL,
     `pictures` SET
         ('') NOT NULL,
+        `event_date_start` DATETIME NOT NULL,
+        `event_date_end` DATETIME NOT NULL,
         `publishing_date` DATETIME NOT NULL,
         `city_id` BIGINT NOT NULL,
         `age_restricted` BOOLEAN NOT NULL

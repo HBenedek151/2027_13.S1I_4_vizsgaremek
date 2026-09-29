@@ -1,0 +1,54 @@
+regisztrációs felület:
+- felhasználó
+- adatok megadása
+- email ellenőrzés
+- ingyenes regisztráció
+
+navbar:
+- home gomb (logó)
+- profil (ha nincs bejelentkezve, akkor bejelentkezés gomb)
+- kereső
+- hirdetés létrehozása
+- kategóriák
+– szűrők
+- inbox (értesítések)
+
+profil(lenyíló fül):
+- kedvencek (ha már nem aktuális, akkor nem fog megjelenni)
+- fiók
+- kijelentkezés
+
+fiók:
+- preview a fiókról (bemutatja a hirdetéseket, ha vannak sajátok)
+- kedvencek
+- beállítások (adatok szerkesztése, preferenciák beállítások terén pl.: sötét mód, értesítések)
+
+hirdetések létrehozása:
+- név
+- leírás
+- képek feltöltése
+- esemény kezdete (nyitva tartás kezdete)
+- esemény vége (nyitva tartás vége)
+- helyszín
+- elérhetőség(ek)
+
+keresési eredmények listája:
+- a hirdetések neve, egy kép és egy rövid leírás (az egér hirdetés fölévitelénél)
+- minden hirdetésnek egy külön box-a van és ezek fognak rendeződni a szűrők és kategóriák alapján
+
+hirdetések részletezett felülete:
+- név
+- leírás
+- képek feltöltése
+- esemény kezdete (nyitva tartás kezdete)
+- esemény vége (nyitva tartás vége)
+- helyszín
+- elérhetőség(ek)
+- kommunikációs/chat felület
+- jelentkezés a programra
+
+
+
+
+
+

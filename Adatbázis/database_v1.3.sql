@@ -1,6 +1,7 @@
 CREATE TABLE `user`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `username` VARCHAR(255) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
     `password` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
     `phone` BIGINT NOT NULL,
@@ -20,18 +21,17 @@ CREATE TABLE `events`(
         ('') NOT NULL,
         `event_date_start` DATETIME NOT NULL,
         `event_date_end` DATETIME NOT NULL,
-        `publishing_date` DATETIME NOT NULL,
         `city_id` BIGINT NOT NULL,
         `age_restricted` BOOLEAN NOT NULL
 );
 CREATE TABLE `categories`(
-    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(255) NOT NULL
 );
 CREATE TABLE `mcategory`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `category_id` BIGINT NOT NULL,
-    `event_id` BIGINT NOT NULL
+    `event_id` BIGINT NOT NULL,
+    `category_id` BIGINT NOT NULL
 );
 CREATE TABLE `application`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -39,30 +39,30 @@ CREATE TABLE `application`(
     `user_id` BIGINT NOT NULL
 );
 CREATE TABLE `cities`(
-    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(255) NOT NULL,
-    `postcode` BIGINT NOT NULL
+    `postcode` INT NOT NULL
 );
 CREATE TABLE `favorites`(
-    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `event_id` BIGINT NOT NULL,
     `user_id` BIGINT NOT NULL
 );
 ALTER TABLE
-    `events` ADD CONSTRAINT `events_city_id_foreign` FOREIGN KEY(`city_id`) REFERENCES `cities`(`id`);
-ALTER TABLE
-    `application` ADD CONSTRAINT `application_event_id_foreign` FOREIGN KEY(`event_id`) REFERENCES `events`(`id`);
+    `favorites` ADD CONSTRAINT `favorites_event_id_foreign` FOREIGN KEY(`event_id`) REFERENCES `events`(`id`);
 ALTER TABLE
     `mcategory` ADD CONSTRAINT `mcategory_category_id_foreign` FOREIGN KEY(`category_id`) REFERENCES `categories`(`id`);
 ALTER TABLE
-    `publisher` ADD CONSTRAINT `publisher_user_id_foreign` FOREIGN KEY(`user_id`) REFERENCES `user`(`id`);
-ALTER TABLE
-    `favorites` ADD CONSTRAINT `favorites_event_id_foreign` FOREIGN KEY(`event_id`) REFERENCES `events`(`id`);
-ALTER TABLE
-    `favorites` ADD CONSTRAINT `favorites_user_id_foreign` FOREIGN KEY(`user_id`) REFERENCES `user`(`id`);
-ALTER TABLE
-    `publisher` ADD CONSTRAINT `publisher_event_id_foreign` FOREIGN KEY(`event_id`) REFERENCES `events`(`id`);
+    `events` ADD CONSTRAINT `events_city_id_foreign` FOREIGN KEY(`city_id`) REFERENCES `cities`(`id`);
 ALTER TABLE
     `application` ADD CONSTRAINT `application_user_id_foreign` FOREIGN KEY(`user_id`) REFERENCES `user`(`id`);
 ALTER TABLE
+    `favorites` ADD CONSTRAINT `favorites_user_id_foreign` FOREIGN KEY(`user_id`) REFERENCES `user`(`id`);
+ALTER TABLE
+    `application` ADD CONSTRAINT `application_event_id_foreign` FOREIGN KEY(`event_id`) REFERENCES `events`(`id`);
+ALTER TABLE
     `mcategory` ADD CONSTRAINT `mcategory_event_id_foreign` FOREIGN KEY(`event_id`) REFERENCES `events`(`id`);
+ALTER TABLE
+    `publisher` ADD CONSTRAINT `publisher_user_id_foreign` FOREIGN KEY(`user_id`) REFERENCES `user`(`id`);
+ALTER TABLE
+    `publisher` ADD CONSTRAINT `publisher_event_id_foreign` FOREIGN KEY(`event_id`) REFERENCES `events`(`id`);

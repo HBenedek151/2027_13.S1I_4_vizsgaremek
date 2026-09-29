@@ -32,6 +32,12 @@ hirdetések létrehozása:
 - helyszín
 - elérhetőség(ek)
 
+kereső:
+- egy keresősáv böngészésre, keresésre
+
+kategóriák:
+- egy menüpont a kategóriák beállítására, szűréshez
+
 keresési eredmények listája:
 - a hirdetések neve, egy kép és egy rövid leírás (az egér hirdetés fölévitelénél)
 - minden hirdetésnek egy külön box-a van és ezek fognak rendeződni a szűrők és kategóriák alapján
@@ -45,10 +51,5 @@ hirdetések részletezett felülete:
 - helyszín
 - elérhetőség(ek)
 - kommunikációs/chat felület
-- jelentkezés a programra
-
-
-
-
-
+- jelentkezés a programra(ha több program van, akkor programcsomagra)
 

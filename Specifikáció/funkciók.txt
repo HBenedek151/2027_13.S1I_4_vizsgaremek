@@ -38,6 +38,9 @@ kereső:
 kategóriák:
 - egy menüpont a kategóriák beállítására, szűréshez
 
+keresés gomb:
+- találatok, keresési eredmények kilistázása
+
 keresési eredmények listája:
 - a hirdetések neve, egy kép és egy rövid leírás (az egér hirdetés fölévitelénél)
 - minden hirdetésnek egy külön box-a van és ezek fognak rendeződni a szűrők és kategóriák alapján

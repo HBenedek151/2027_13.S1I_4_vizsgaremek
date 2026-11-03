@@ -1,15 +1,18 @@
 CREATE TABLE `user`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `username` VARCHAR(255) NOT NULL,
-    `password` VARCHAR(255) NOT NULL,
+    `username` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(50) NOT NULL,
+    `password` VARCHAR(70) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
-    `phone` VARCHAR(255) NOT NULL,
+    `phone` VARCHAR(20) NOT NULL,
     `birth_date` DATETIME NOT NULL
 );
 CREATE TABLE `events`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `name` VARCHAR(255) NOT NULL,
+    `name` VARCHAR(100) NOT NULL,
     `description` MEDIUMTEXT NOT NULL,
+    `location` VARCHAR(60) NOT NULL,
+    `address` VARCHAR(100) NOT NULL,
     `pictures` SET
         ('') NOT NULL,
         `publisher_id` INT NOT NULL,
@@ -20,7 +23,7 @@ CREATE TABLE `events`(
 );
 CREATE TABLE `categories`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `name` VARCHAR(255) NOT NULL
+    `name` VARCHAR(30) NOT NULL
 );
 CREATE TABLE `mcategory`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -34,7 +37,7 @@ CREATE TABLE `applicant`(
 );
 CREATE TABLE `cities`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `name` VARCHAR(255) NOT NULL,
+    `name` VARCHAR(60) NOT NULL,
     `zip_code` INT NOT NULL
 );
 CREATE TABLE `favorites`(
